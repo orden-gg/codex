@@ -27,7 +27,7 @@ Codex is the documentation repository for Fireball, a complementary game client 
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/orden-gg/codex.git
 cd codex
 ```
 
@@ -112,19 +112,26 @@ See the [Fumadocs documentation](https://fumadocs.vercel.app/) for available com
 
 ## Contributing
 
-1. Create a new branch for your changes
-2. Make your changes to the MDX files or code
-3. Test locally with `bun run dev`
-4. Run `bun run typecheck` to verify TypeScript
-5. Submit a pull request
+We welcome contributions from the community! Whether you're fixing typos, improving documentation, or adding new content, your help is appreciated.
 
-## Content Guidelines
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for detailed information on:
 
-- Use clear, concise language
-- Include code examples where appropriate
-- Add screenshots or diagrams for complex features
-- Keep the table of contents up to date
-- Follow the existing file structure and naming conventions
+- How to report issues
+- Development setup
+- Documentation style guide
+- Pull request process
+- Code of conduct
+
+**Quick start for contributors:**
+
+1. Fork the repository
+2. Create a new branch for your changes
+3. Make your changes to the MDX files or code
+4. Test locally with `bun run dev`
+5. Run `bun run typecheck` to verify TypeScript
+6. Submit a pull request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 ## Support
 
@@ -136,7 +143,7 @@ For questions or issues:
 
 ## License
 
-[Add your license here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 

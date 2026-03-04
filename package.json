@@ -2,6 +2,20 @@
   "name": "@fireballgg/codex",
   "version": "0.0.1",
   "private": false,
+  "license": "MIT",
+  "description": "Official codex of Fireball - the intelligent gaming agent platform for Gigaverse",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orden-gg/codex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orden-gg/codex/issues"
+  },
+  "homepage": "https://codex.fireball.gg",
+  "keywords": [
+    "fireball",
+    "gigaverse"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
