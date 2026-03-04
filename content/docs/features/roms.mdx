@@ -1,0 +1,57 @@
+---
+title: ROMs
+description: Manage your ROMs, view ROM Core stats, and claim resources
+---
+
+ROMs are digital assets in Gigaverse that produce resources over time — energy, shards, dust, and GIGUS dust. The ROMs page lets you manage your collection, view production stats, and claim accumulated resources.
+
+## ROM Grid
+
+Your ROMs are displayed as cards with key information at a glance. The header shows your total count: **N ROMs (M boosted)** — where "boosted" refers to child ROMs that inherit properties from parent ROMs.
+
+## ROM Tiers
+
+ROMs come in four tiers, each with different production rates and value:
+
+| Tier       | Color  |
+| ---------- | ------ |
+| **Silver** | Gray   |
+| **Gold**   | Yellow |
+| **Void**   | Pink   |
+| **Giga**   | Red    |
+
+## Filters
+
+| Filter          | Options                                               |
+| --------------- | ----------------------------------------------------- |
+| **Tier**        | Toggle Silver, Gold, Void, and/or Giga (multi-select) |
+| **Faction**     | Dropdown with faction icons and "All" option          |
+| **Memory Sort** | Sort by memory value: ascending, descending, or none  |
+| **Reset**       | Clear all active filters                              |
+
+## ROM Core
+
+The ROM Core section is a two-card dashboard at the top of the page:
+
+### Energy Card
+
+Shows your energy production and reserves:
+
+- **Total Energy** — Current / Maximum capacity
+- **Default Energy** — Base energy from your account
+- **ROM Energy** — Additional energy from ROMs
+- **Time period toggle** — View production rates for Day, Week, or Month
+- **Convert Energy** — Button to convert excess energy to GIGUS Dust (shows count of convertible ROMs)
+
+### Actions Card
+
+- **ROM Stats Total** — Aggregate production stats across all ROMs
+- **Claim Resources** — Button to manually claim accumulated resources from all eligible ROMs (shows count of claimable ROMs)
+
+## Automated ROM Management
+
+Instead of manually claiming resources, you can subscribe to the [ROM Claimer service](/guides/services#rom-claimer) to automatically claim when ROMs reach 90% capacity. The service also supports converting excess energy to GIGUS Dust with a configurable energy threshold.
+
+## Child ROMs
+
+Child (boosted) ROMs are sorted to the bottom of the grid and excluded from aggregate statistics. They're tracked separately in the header count.

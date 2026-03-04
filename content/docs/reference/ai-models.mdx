@@ -1,0 +1,44 @@
+---
+title: Agent AI Models
+description: Reference for dungeon and fishing agent AI models and presets
+---
+
+Fireball uses purpose-built agent AI models for automated gameplay. Here's a reference for all available models and presets.
+
+## Dungeon Agent AI
+
+Fireball's dungeon agent AI comes in three **presets** that control the playstyle:
+
+| Preset        | Strategy                                         |
+| ------------- | ------------------------------------------------ |
+| **Defensive** | Prioritizes survival, safer plays, more healing  |
+| **Balanced**  | Even balance of offense and defense              |
+| **Offensive** | Prioritizes damage, faster clears, riskier plays |
+
+### When to Use Each Preset
+
+| Situation                            | Recommended Preset |
+| ------------------------------------ | ------------------ |
+| Undergeared or new to a dungeon type | Defensive          |
+| General-purpose grinding             | Balanced           |
+| Well-geared, maximizing speed        | Offensive          |
+| Struggling with win rate             | Defensive          |
+| Comfortable with the content         | Offensive          |
+
+### How the Agent AI Decides
+
+1. **Situation Analysis** — Evaluates health, shields, gear, and dungeon position
+2. **Move Scoring** — Scores each possible action, weighted by the selected preset
+3. **Loot Selection** — Prioritizes rewards based on rarity, needs, and game phase
+4. **Phase Adaptation** — Adjusts strategy for early, mid, and late dungeon rooms
+
+## Fishing Agent AI
+
+Fireball's fishing agent AI handles all decisions in Agent mode:
+
+- **Card Evaluation** — Assesses each card's damage potential and effects
+- **Probability Analysis** — Calculates expected outcomes of redraws
+- **Optimal Selection** — Always picks the play with the highest expected return
+- **Deterministic** — Same hand against the same fish produces the same play every time
+
+The same agent AI powers the hint system in Manual mode.

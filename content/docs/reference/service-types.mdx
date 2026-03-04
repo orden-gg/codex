@@ -1,0 +1,62 @@
+---
+title: Service Types
+description: Quick reference for all automated service types and their options
+---
+
+A quick-reference for all four automated services available in Fireball.
+
+## Service Comparison
+
+| Service            | What It Does                         | Configurable                        | Free with Scroll of Fire |
+| ------------------ | ------------------------------------ | ----------------------------------- | ------------------------ |
+| **Fish Seller**    | Sells fish for seaweed               | Yes — preserve counts per rarity    | Yes                      |
+| **ROM Claimer**    | Claims ROM resources at 90% capacity | Yes — energy conversion + threshold | Yes                      |
+| **Loot Collector** | Breaks pots and chests for loot      | No                                  | Yes                      |
+| **Hatchery**       | Maintains egg hatching conditions    | Yes — per-egg thresholds            | Yes                      |
+
+## Fish Seller Configuration
+
+| Setting             | Values                     | Default |
+| ------------------- | -------------------------- | ------- |
+| Preserve per rarity | 0 (sell all) to N (keep N) | 0       |
+
+## ROM Claimer Configuration
+
+| Setting          | Values                | Default |
+| ---------------- | --------------------- | ------- |
+| Convert Energy   | On / Off              | Off     |
+| Energy Threshold | 0 to max daily energy | 0       |
+| Claim Trigger    | 90% ROM capacity      | Fixed   |
+
+## Loot Collector
+
+No configuration needed. Automatically tracks and breaks:
+
+- Noob Chest
+- Juiced Chest
+- Blue Pot
+- Tan Pot
+
+## Hatchery Configuration
+
+Per-egg settings:
+
+| Setting            | Range        | Description                     |
+| ------------------ | ------------ | ------------------------------- |
+| Temperature        | 0–100        | Minimum temperature to maintain |
+| Comfort            | 0–5          | Maintained daily (decays 1/day) |
+| Fate               | 0–20         | Applied at 90%+ hatch progress  |
+| Faction Priorities | Ordered list | Preferred factions for hatching |
+
+Default thresholds can be set as a fallback for unconfigured eggs.
+
+## Common Features
+
+All services share these capabilities:
+
+- **Subscribe / Unsubscribe** — Toggle the service on or off
+- **Update Options** — Change configuration while subscribed
+- **Reveal** — View accumulated results since last check
+- **History** — Full operation log with timestamps
+
+See [Services](/guides/services) for the full guide.

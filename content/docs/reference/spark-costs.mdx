@@ -1,0 +1,69 @@
+---
+title: Spark Costs
+description: Reference for Spark pricing, limits, and transaction types
+---
+
+A reference for how Sparks are consumed and managed across Fireball.
+
+## Cost Factors
+
+Spark costs are dynamic and depend on:
+
+- **Game type** — Dungeon or Fishing
+- **Subtype** — Normal or Underhaul (dungeons) or Small, Normal, Big (fishing)
+- **Agent AI model** — Different models may have different costs
+- **Account skills** — Higher skill levels can reduce costs
+
+The exact Spark cost is always displayed before you start a run or subscribe to a service.
+
+## Activity Costs
+
+| Activity        | Cost Basis                        |
+| --------------- | --------------------------------- |
+| Dungeon Run     | Per run, varies by type and model |
+| Fishing Session | Per session, varies by type       |
+| Fish Seller     | Per invocation                    |
+| ROM Claimer     | Per claim operation               |
+| Loot Collector  | Per loot item processed           |
+| Hatchery        | Per maintenance operation         |
+| Fishing Hints   | Per hint in manual mode           |
+
+## Free Access
+
+| Method             | Covers                                        |
+| ------------------ | --------------------------------------------- |
+| **Scroll of Noob** | 5-day free trial for dungeon and fishing runs |
+| **Scroll of Fire** | Free access to game runs and all four services (permanent) |
+| **Airdrops**       | Occasional free Spark distributions           |
+
+## Transaction Types
+
+Every Spark movement is tracked in your transaction history:
+
+| Type         | Description                                |
+| ------------ | ------------------------------------------ |
+| **Game**     | Sparks consumed by dungeon or fishing runs |
+| **Purchase** | ETH → Sparks purchases                     |
+| **Airdrop**  | Free Spark distributions                   |
+| **Service**  | Sparks consumed by automated services      |
+| **Hint**     | Sparks consumed by manual fishing hints    |
+
+## Purchase Limits
+
+| Limit                 | Value                                |
+| --------------------- | ------------------------------------ |
+| **30-day period cap** | 20,000 Sparks per account            |
+| **Rolling window**    | Resets on a 30-day rolling basis     |
+| **Gas fee buffer**    | 0.00002 ETH reserved per transaction |
+| **Gift limit**        | Receiver's own period limit applies  |
+
+## Cost Calculator
+
+The [Sparks page](/guides/buying-sparks) includes a calculator that estimates costs based on:
+
+- Selected game type (Dungeon or Fishing)
+- Time range (Day, Week, Month, or Max)
+- Your account's energy regeneration rate
+- Energy produced by your ROMs
+
+This gives you a personalized estimate for how many Sparks you'll need.

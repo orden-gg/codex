@@ -1,0 +1,15 @@
+{
+  "title": "Features",
+  "pages": [
+    "dashboard",
+    "jobs",
+    "inventory",
+    "pets-and-eggs",
+    "roms",
+    "world-and-crafting",
+    "user-profiles",
+    "settings",
+    "notifications",
+    "pwa-install"
+  ]
+}

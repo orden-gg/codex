@@ -1,0 +1,16 @@
+{
+  "title": "Documentation",
+  "pages": [
+    "index",
+    "getting-started",
+    "games",
+    "features",
+    "guides",
+    "reference",
+    "---Support---",
+    "faq",
+    "troubleshooting",
+    "glossary",
+    "changelog"
+  ]
+}

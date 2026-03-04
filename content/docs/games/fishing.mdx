@@ -1,0 +1,101 @@
+---
+title: Fishing
+description: Learn about fishing types, manual and agent modes, and the hint system
+---
+
+Fishing is one of the core game modes in Gigaverse. Each fishing session pits you against a fish in a card-based battle — play the right cards to deal damage, weaken the fish, and reel it in. Fireball can automate the entire process or give you hints while you play manually.
+
+## How It Works
+
+1. **Choose a fishing type** — Small, Normal, or Big
+2. **Pick a mode** — Agent (automated) or Manual (play with agent AI hints)
+3. **Set the number of sessions** — Based on your energy and daily limits
+4. **Start fishing** — Fireball handles the rest, or you play card by card
+
+Once started, your sessions appear in the [Jobs](/features/jobs) page. You can watch live via the fishing viewer, or close your browser and come back later.
+
+## Fishing Types
+
+| Type       | Energy Cost | Daily Limit | Juiced Limit | Description                       |
+| ---------- | ----------- | ----------- | ------------ | --------------------------------- |
+| **Small**  | 12          | 10          | 20           | Lower difficulty, smaller rewards |
+| **Normal** | 16          | 10          | 20           | Balanced difficulty and rewards   |
+| **Big**    | 20          | 10          | 20           | Toughest fish, best rewards       |
+
+<Callout type="info">
+  **Juiced mode** doubles your daily limit from 10 to 20 runs for all fishing types. Values are
+  subject to change based on game configuration.
+</Callout>
+
+## Gameplay Modes
+
+### Agent Mode (Automated)
+
+In Agent mode, Fireball's agent AI plays the entire session for you. The agent AI:
+
+- Evaluates each card's potential outcome
+- Calculates redraw probabilities
+- Selects the highest expected return play
+- Handles multiple consecutive sessions automatically
+
+Agent mode supports all configuration options including autoclaim, autorepair, and equipment selection.
+
+### Manual Mode
+
+In Manual mode, you play the fishing game yourself with optional **agent AI hints**. You're limited to one session at a time but get full control over every card decision.
+
+Manual mode is great for learning the fishing mechanics, having fun with the card game, or when you want a more hands-on experience.
+
+#### Hint System
+
+When playing manually, Fireball can show you agent AI-powered hints for each decision:
+
+- **Recommended action** — "Play \{card\}", "Redraw your hand", or "Choose \{card\}"
+- **Reasoning** — Why the agent AI recommends this move
+- **Confidence level** — Color-coded from Very High (90%+) down to Very Low (&lt;30%)
+
+A tutorial modal explains the hint system the first time you use it. Free hints are included daily, with additional hints available via Sparks.
+
+## Configuration Options
+
+Before starting a fishing session, you can configure:
+
+| Option             | Description                                                                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Runs**           | Capped by energy, daily limits, and sparks                                                                                                           |
+| **Autoclaim**      | Automatically claim energy from ROMs if needed                                                                                                       |
+| **Autorepair**     | Auto-repair broken gear during the session. If gear is beyond repair, Fireball will swap it for another piece of the same rarity from your inventory |
+| **Jebaitor Skill** | Use Jebaitor skill when at daily limit (if you have the skill)                                                                                       |
+| **Equipment**      | Select 1 Rod and up to 2 Lures for the session                                                                                                       |
+
+A **Repeat Previous Run** button appears after your first session, letting you quickly reuse your last configuration.
+
+## Live Fishing Viewer
+
+While a session is in progress, you can watch it live. The viewer shows:
+
+- **Fish health bar** — Track damage dealt to the fish
+- **Your hand** — See your current cards and select plays (manual mode)
+- **Redraw option** — Reshuffle your hand without playing
+- **Round counter** — Track the current round
+- **Damage numbers** — Floating indicators for hits, misses, redraws, and catches
+- **Encounter history** — Full log of every action taken
+- **Fishing drops** — Items and rewards earned
+
+On desktop, the sidebar shows your account level, equipped gear, encounter history, and drops. On mobile, these are available as collapsible sheets.
+
+## Fishing History
+
+View your past sessions on the **Fishing** page (sidebar → Games → Fishing). The history page includes:
+
+- **Type filter** — show All, Small, Normal, or Big sessions
+- **Caught-only filter** — toggle to show only successful catches
+- **Result limit** — display 20, 50, or 100 sessions
+- **Catch rate** — see your overall catch rate for the filtered results
+
+## Tips
+
+- **Use Agent mode** for efficient grinding — the agent AI makes optimal decisions
+- **Try Manual mode** to learn — the hint system teaches you the card strategy
+- **Equip your best rod and lures** — gear significantly impacts your catch rate
+- **Check your equipment durability** before queuing multiple sessions

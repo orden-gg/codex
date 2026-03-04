@@ -1,0 +1,111 @@
+---
+title: Conquest
+description: Territory control across the Gigaverse map with faction-based strategy
+---
+
+Conquest is the territory control mode in Gigaverse — a real-time strategy game where factions compete for control of a hexagonal tile map. Fireball provides a full-featured interactive map viewer with leaderboards, charts, and faction management.
+
+## Overview
+
+In Conquest, you join a faction and work together with other members to control territory on a hex-grid map. The game progresses in **ticks** — periodic updates where territory changes are applied. Factions earn points based on the tiles they control, and the top factions win when the game concludes.
+
+## The Map
+
+The Conquest map is a hexagonal grid where each tile can be controlled by a faction or remain unoccupied.
+
+### Tile Types
+
+- **Regular tiles** — Standard territory controlled by factions
+- **Fort tiles** — Special stronghold positions with enhanced control value
+
+### Navigation
+
+- **WASD keys** (desktop) — Pan the camera around the map
+- **Mouse/Touch** — Click or tap tiles to select them and view details
+- **Scroll/Pinch** — Zoom in and out
+- **Tile highlighting** — Hover to preview, click to select, adjacent tiles shown
+
+### View Modes
+
+The map defaults to a **2D top-down view**. An optional **3D view** is available and can be toggled in the settings.
+
+## Factions
+
+There are 7 factions in Conquest:
+
+| Faction  | Color  |
+| -------- | ------ |
+| Crusader | Red    |
+| Overseer | Orange |
+| Athena   | Purple |
+| Archon   | Blue   |
+| Foxglove | Green  |
+| Summoner | Gold   |
+| Chobo    | Gray   |
+
+### Joining a Faction
+
+From the **Faction Hub** (right side of the map), you can:
+
+- **Join** a faction directly (if open)
+- **Apply** to a faction and wait for approval
+- **Accept invitations** from factions that have invited you
+
+### Faction Ranks
+
+Each faction has four ranks with different permissions:
+
+| Rank          | Role                                                   |
+| ------------- | ------------------------------------------------------ |
+| **Leader**    | Full control — manage members, treasury, and orders    |
+| **Warlord**   | Combat-focused — participate in strategic decisions    |
+| **Scout**     | Intelligence — movement and reconnaissance permissions |
+| **Delegator** | Resources — manage faction treasury and delegation     |
+
+### Faction Hub
+
+The Faction Hub provides access to:
+
+- **Members** — View approved members, pending applications, and invitations. Leaders can approve, kick, or change ranks.
+- **Treasury** — View and manage faction resources. Delegate resources to the faction. Auto-refreshes every 60 seconds.
+- **Orders** — View, create, and complete faction orders. Coordinate strategy with your team. Auto-refreshes every 60 seconds.
+
+## Game Status
+
+The top of the screen shows a **countdown timer** to the next tick. When a tick expires, the map updates with new territory changes. You can also scrub through **tick history** to review how the map evolved over time.
+
+### Tiles Bar
+
+A full-width progress bar at the top shows territory distribution — each faction's segment is sized by their control points, color-coded by faction. Hover over any segment to see the faction name, points, and percentage.
+
+## Leaderboard
+
+The Conquest leaderboard has two views:
+
+### Player Leaderboard
+
+- Rank, name, faction, crown count (points contributed), and contribution percentage
+
+### Faction Leaderboard
+
+- Rank, faction icon and name, tiles controlled, and total points
+
+## Chart View
+
+A line chart tracks each faction's point total over time. Each faction is drawn in its own color. You can toggle individual factions on or off by clicking the legend, and hover to see detailed values at any tick.
+
+## Settings
+
+Access Conquest settings from the gear icon:
+
+### Quick Toggles
+
+- **Heatmap** — Visualization overlay for tile density
+- **Activity** — Show recent conquest activity
+- **Adjacent** — Highlight tiles adjacent to your selection
+- **2D/3D** — Switch camera mode (if unlocked)
+
+### Advanced Controls (Desktop)
+
+- Hex padding, highlight offset, highlight width, and color customization
+- Reset button to return to defaults

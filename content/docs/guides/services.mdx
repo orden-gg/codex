@@ -1,0 +1,92 @@
+---
+title: Services
+description: Automate fish selling, ROM claiming, loot collection, and egg hatching
+---
+
+Services are background automations that handle repetitive tasks for you. Unlike dungeon runs and fishing sessions that you start manually, services run continuously on a schedule — checking your account and taking action when needed.
+
+## Available Services
+
+Fireball offers four automated services:
+
+| Service            | What It Does                                                       |
+| ------------------ | ------------------------------------------------------------------ |
+| **Fish Seller**    | Automatically sells your fish for seaweed                          |
+| **ROM Claimer**    | Claims ROM resources (shards, dust, GIGUS dust) when near capacity |
+| **Loot Collector** | Breaks pots and chests to collect loot items                       |
+| **Hatchery**       | Maintains egg hatching conditions (temperature, comfort, fate)     |
+
+## How Services Work
+
+1. **Subscribe** to a service from the Services page
+2. **Configure options** (if available) for that service
+3. The service runs automatically in the background
+4. **Reveal results** anytime to see what's been accumulated since your last check
+
+Services require an active Gigaverse session and consume Sparks per operation.
+
+<Callout type="info">
+  The **Scroll of Fire** grants free access to all services, bypassing Spark costs entirely. Without
+  it, each service invocation costs Sparks.
+</Callout>
+
+## Fish Seller
+
+Automatically sells your fish for seaweed. Runs approximately 20 checks per hour.
+
+### Configuration: Untouchable Supply
+
+You can set a **preserve count per rarity** — the Fish Seller will keep that many fish of each rarity and only sell the rest. Set a preserve count to 0 to sell all fish of that rarity, or set a higher number to keep a reserve.
+
+## ROM Claimer
+
+Automatically claims resources from your ROMs when they reach 90% capacity. Claimed resources include shards, dust, and GIGUS dust depending on your ROM tiers.
+
+### Configuration
+
+- **Convert Energy** — Toggle whether to convert excess energy to GIGUS dust
+- **Energy Threshold** — Set a minimum energy reserve level (0 to your max daily energy); the claimer won't convert energy below this threshold
+
+## Loot Collector
+
+Automatically breaks pots and chests to collect the loot inside. Tracks recipes including Noob Chest, Juiced Chest, Blue Pot, and Tan Pot. No additional configuration needed — subscribe and it handles everything.
+
+## Hatchery
+
+The most configurable service. Automatically maintains your eggs in the hatchery by managing temperature, comfort, and fate levels.
+
+### Configuration Per Egg
+
+For each egg, you can set:
+
+- **Temperature** (0–100) — Minimum temperature to maintain
+- **Comfort** (0–5) — Comfort level to maintain (decays 1 per day)
+- **Fate** (0–20) — One-time cost to reach the target fate level. Applied automatically when hatching progress reaches 90% or above
+- **Faction Priorities** — Preferred faction order for hatching outcomes
+
+You can also set **default thresholds** that apply to any egg without specific configuration.
+
+## The Reveal Mechanic
+
+Services accumulate results silently in the background. When you're ready to see what happened, hit the **Reveal** button to view everything since your last check.
+
+Each service shows different reveal data:
+
+- **ROM Claimer** — Shards by type, dust by type, GIGUS dust total
+- **Fish Seller** — Fish sold by type, seaweed earned
+- **Loot Collector** — Loot items collected, pots/chests broken by recipe
+- **Hatchery** — Eggs hatched with progress and rarity, materials used
+
+The reveal plays an animated overlay showing your accumulated results.
+
+## Service History
+
+View the full log of service operations at **Services → History**. This shows all transactions with timestamps and operation details.
+
+## Requirements
+
+To use services, you need:
+
+1. An active **Gigaverse session** (check expiration in the sidebar)
+2. **Sparks** for service costs (unless you have the Scroll of Fire)
+3. **Giga-Juice** active on your account

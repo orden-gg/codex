@@ -1,0 +1,47 @@
+---
+title: Notifications
+description: Set up push notifications to stay updated on your Fireball activity
+---
+
+Fireball supports **push notifications** to keep you informed about job completions, service updates, and other events — even when you're not on the site.
+
+## Setting Up Notifications
+
+1. Go to **Settings** in the dashboard sidebar
+2. Find the **Notification Settings** section
+3. Click **Enable Notifications**
+4. Allow browser notification permissions when prompted
+5. Select which notification types you want to receive
+6. Click **Save & Enable**
+
+<Callout type="warning">
+  If your browser has blocked notifications for Fireball, you'll need to manually re-enable them in
+  your browser settings. Look for the lock icon in your address bar to manage site permissions.
+</Callout>
+
+## Managing Notifications
+
+Once enabled, you can customize your notifications:
+
+- **All Notifications** — Master checkbox to enable or disable everything
+- **Per-type toggles** — Enable or disable individual notification types
+- **Save Changes** — Apply your updated preferences
+- **Disable All** — Turn off notifications entirely
+
+## Push Notifications vs. Browser
+
+Push notifications work through your browser's notification system:
+
+- **Desktop** — Appears as system notifications
+- **Mobile PWA** — Appears as native push notifications (requires the app to be installed)
+- **Background delivery** — Notifications arrive even when the Fireball tab is closed
+
+## Requirements
+
+- A modern browser that supports the Push API
+- Browser notification permission granted for Fireball
+- Service Worker registered (happens automatically)
+
+## App Updates
+
+Fireball's service worker checks for updates every 60 minutes. When a new version is available, you'll be prompted to refresh. This ensures you always have the latest notification capabilities.

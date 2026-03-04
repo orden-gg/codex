@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* Scan fumadocs-ui components for Tailwind classes */
+@source '../node_modules/fumadocs-ui/dist/**/*.js';
+
+/*
+ * Fireball Gaming Theme for Fumadocs
+ * Based on the main client app's dark gaming aesthetic
+ */
+
+@theme {
+  /* Font configuration - using system fonts, can be customized later */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+}
+
+/* Light mode - minimal, clean */
+:root {
+  --color-fd-background: hsl(0, 0%, 98%);
+  --color-fd-foreground: hsl(240, 10%, 10%);
+  --color-fd-muted: hsl(240, 5%, 96%);
+  --color-fd-muted-foreground: hsl(240, 5%, 45%);
+  --color-fd-popover: hsl(0, 0%, 100%);
+  --color-fd-popover-foreground: hsl(240, 10%, 15%);
+  --color-fd-card: hsl(0, 0%, 100%);
+  --color-fd-card-foreground: hsl(240, 10%, 10%);
+  --color-fd-border: hsl(240, 6%, 90%);
+  --color-fd-primary: hsl(32, 95%, 50%); /* Fireball spark orange */
+  --color-fd-primary-foreground: hsl(0, 0%, 100%);
+  --color-fd-secondary: hsl(240, 5%, 93%);
+  --color-fd-secondary-foreground: hsl(240, 10%, 10%);
+  --color-fd-accent: hsl(240, 5%, 90%);
+  --color-fd-accent-foreground: hsl(240, 10%, 10%);
+  --color-fd-ring: hsl(32, 95%, 50%);
+}
+
+/* Dark mode - Fireball gaming aesthetic */
+.dark {
+  /* Deep dark background matching Fireball client */
+  --color-fd-background: hsl(265, 10%, 8%);
+  --color-fd-foreground: hsl(0, 0%, 95%);
+
+  /* Muted elements */
+  --color-fd-muted: hsl(265, 8%, 14%);
+  --color-fd-muted-foreground: hsl(265, 5%, 60%);
+
+  /* Popover/dropdown styling */
+  --color-fd-popover: hsl(265, 10%, 12%);
+  --color-fd-popover-foreground: hsl(0, 0%, 90%);
+
+  /* Card styling */
+  --color-fd-card: hsl(265, 10%, 11%);
+  --color-fd-card-foreground: hsl(0, 0%, 95%);
+
+  /* Borders - subtle with transparency */
+  --color-fd-border: hsl(0, 0%, 100%, 0.1);
+
+  /* Primary - Spark/Energy orange for gaming feel */
+  --color-fd-primary: hsl(32, 90%, 55%);
+  --color-fd-primary-foreground: hsl(265, 10%, 8%);
+
+  /* Secondary elements */
+  --color-fd-secondary: hsl(265, 8%, 16%);
+  --color-fd-secondary-foreground: hsl(0, 0%, 92%);
+
+  /* Accent - slightly warmer for hover states */
+  --color-fd-accent: hsl(265, 8%, 18%);
+  --color-fd-accent-foreground: hsl(0, 0%, 95%);
+
+  /* Ring focus indicator */
+  --color-fd-ring: hsl(32, 90%, 55%);
+}
+
+/* Gaming rarity colors for potential use in docs */
+:root {
+  --fireball-common: hsl(0, 0%, 85%);
+  --fireball-uncommon: hsl(142, 70%, 45%);
+  --fireball-rare: hsl(217, 90%, 55%);
+  --fireball-epic: hsl(282, 80%, 55%);
+  --fireball-legendary: hsl(45, 95%, 55%);
+  --fireball-relic: hsl(15, 90%, 50%);
+  --fireball-giga: hsl(316, 90%, 55%);
+
+  /* Game stat colors */
+  --fireball-hp: hsl(142, 60%, 55%);
+  --fireball-shield: hsl(195, 50%, 55%);
+  --fireball-energy: hsl(45, 90%, 55%);
+  --fireball-spark: hsl(32, 90%, 55%);
+}
+
+/* Base layer styles */
+@layer base {
+  * {
+    @apply border-fd-border;
+  }
+
+  body {
+    @apply bg-fd-background text-fd-foreground;
+  }
+}
+
+/* Custom scrollbar for dark gaming aesthetic */
+@layer utilities {
+  .scrollbar-gaming::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-gaming::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-gaming::-webkit-scrollbar-thumb {
+    background: hsl(265, 8%, 25%);
+    border-radius: 4px;
+  }
+
+  .scrollbar-gaming::-webkit-scrollbar-thumb:hover {
+    background: hsl(265, 8%, 35%);
+  }
+}

@@ -1,0 +1,95 @@
+---
+title: How Fireball Works
+description: Understanding Fireball's automated gameplay, agent AI models, and background operation
+---
+
+Fireball is an intelligent autobattler that plays Gigaverse games on your behalf. It runs on Fireball's servers — not in your browser — so your runs continue even after you close the tab or shut down your computer.
+
+## Background Operation
+
+One of Fireball's key features is that it runs **entirely in the background**. You don't need to keep your browser open or your computer running.
+
+Once you start a session:
+
+- Close your browser tab
+- Turn off your PC
+- Go about your day
+
+Fireball handles everything automatically. Your runs continue until completion, and you can check results anytime.
+
+## The Job System
+
+When you start dungeon runs or fishing sessions, Fireball creates a **job** — a queued task that runs on Fireball's servers. Jobs track:
+
+- **Status** — queued, in progress, paused, completed, failed, or cancelled
+- **Progress** — how many runs are complete out of the total
+- **Win rate** — your success percentage for that batch
+- **Configuration** — the dungeon type, agent AI model, equipment, and other options you selected
+
+You can monitor all your jobs from the [Jobs](/features/jobs) page, or watch a run live through the dungeon/fishing viewer.
+
+## The Agent AI Decision Engine
+
+Fireball uses purpose-built agent AI models to make gameplay decisions. Every choice follows deterministic logic — no randomness, no luck.
+
+### Dungeon Agent AI
+
+The dungeon agent AI uses configurable presets:
+
+1. **Situation Analysis** — Evaluates your health, shields, gear, and position in the dungeon
+2. **Move Scoring** — Calculates the value of each possible action, weighted by the selected preset
+3. **Loot Selection** — Prioritizes rewards based on rarity, current needs, and game phase
+4. **Adaptive Strategy** — Adjusts between early, mid, and late game phases
+
+The three [presets](/reference/ai-models) — Defensive, Balanced, and Offensive — control how aggressively the agent AI plays. Defensive prioritizes survival; Offensive prioritizes damage and speed.
+
+### Fishing Agent AI
+
+The fishing agent AI makes optimal decisions for each card play:
+
+1. **Card Evaluation** — Assesses each card's damage potential and effects
+2. **Probability Analysis** — Calculates the expected outcome of redraws
+3. **Optimal Selection** — Chooses the play with the highest expected return
+4. **Consistency** — Same hand against the same fish produces the same decision every time
+
+### Automated Services
+
+Beyond games, Fireball also runs [background services](/guides/services) — automated tasks like selling fish, claiming ROM resources, breaking pots for loot, and maintaining egg hatchery conditions.
+
+## Security
+
+Fireball operates securely within strict boundaries:
+
+- **Signed authentication** — Uses the same signature as Gigaverse
+- **No wallet access** — Cannot make transactions with your funds
+- **Game actions only** — Can only perform in-game moves
+
+The signature you provide allows Fireball to:
+
+- Make moves in dungeons
+- Play fishing games
+- Collect loot and rewards
+- Manage in-game items (selling fish, breaking pots, etc.)
+
+It does **NOT** allow:
+
+- Accessing your wallet funds
+- Making blockchain transactions
+- Transferring NFTs or tokens
+
+<Callout type="info">
+  The only time Fireball interacts with your wallet is when you explicitly purchase Sparks — and
+  that requires your manual approval through the wallet popup.
+</Callout>
+
+## Scheduling Runs
+
+Starting a batch of runs is straightforward:
+
+1. **Select your game mode** — Dungeon or Fishing
+2. **Choose the type** — Normal or Underhaul (dungeons) or Small, Normal, Big (fishing)
+3. **Pick your agent AI preset** — Defensive, Balanced, or Offensive (dungeons)
+4. **Configure options** — Equipment, number of runs, autoclaim, autorepair
+5. **Start and walk away** — Fireball executes each run sequentially
+
+Each run in the batch completes before the next one starts, with optimal decisions made throughout.

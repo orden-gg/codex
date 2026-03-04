@@ -1,0 +1,115 @@
+---
+title: Dungeons
+description: Learn about dungeon types, agent AI models, and automated combat in Fireball
+---
+
+Dungeons are the core gameplay mode in Gigaverse. Each dungeon run is an adventure where you battle through rooms of progressively harder enemies to earn loot and rewards. Fireball automates the entire process — from combat decisions to loot selection.
+
+## How It Works
+
+1. **Choose your dungeon type** — Normal or Underhaul
+2. **Pick an agent AI preset** — Defensive, Balanced, or Offensive
+3. **Set the number of runs** — Based on your available energy and daily limits
+4. **Start and walk away** — Fireball handles combat and loot decisions room by room
+
+Once started, your runs appear in the [Jobs](/features/jobs) page. You can monitor progress in real time via the live dungeon viewer, or close your browser entirely — Fireball runs everything in the background.
+
+## Dungeon Types
+
+| Type          | Rooms | Energy Cost | Daily Limit | Juiced Limit | Description                                      |
+| ------------- | ----- | ----------- | ----------- | ------------ | ------------------------------------------------ |
+| **Normal**    | 16    | 40          | 10          | 12           | Standard dungeon with balanced difficulty        |
+| **Underhaul** | 16    | 40          | 8           | 9            | Alternative dungeon (requires checkpoint unlock) |
+
+<Callout type="info">
+  **Juiced runs** are available for both Normal and Underhaul dungeons. Juiced mode costs 3x the
+  normal energy but grants additional daily runs.
+</Callout>
+
+### Normal Dungeons
+
+The standard dungeon experience. 16 rooms of combat with scaling difficulty. A great starting point for new players and the most commonly run dungeon type.
+
+### Underhaul Dungeons
+
+An alternative dungeon type that requires the **Underhaul Unlock** checkpoint. Shares the same energy cost as Normal (40) but has a lower daily cap of 8 runs.
+
+## Agent AI Models
+
+You choose an **agent AI preset** that controls the playstyle:
+
+| Preset        | Strategy                                |
+| ------------- | --------------------------------------- |
+| **Defensive** | Prioritizes survival and safe plays     |
+| **Balanced**  | Balances offense and defense evenly     |
+| **Offensive** | Prioritizes damage and aggressive plays |
+
+Choose based on your confidence level and gear quality:
+
+- **Defensive** is safer for undergeared characters or harder content
+- **Balanced** is a solid default for most situations
+- **Offensive** works well when you have strong gear and want faster clears
+
+### Repeat Previous Run
+
+After your first run, you'll see a **Repeat Previous Run** option that loads your last saved configuration — including model, equipment, and consumables. This makes it easy to queue up the same run again without reconfiguring.
+
+## Combat System
+
+Combat in Gigaverse dungeons uses an extended rock-paper-scissors system. Fireball's agent AI analyzes each situation and makes optimal decisions based on:
+
+- Your current health and shields
+- Enemy type and difficulty
+- Available moves and their outcomes
+- Room progression (early, mid, or late game phase)
+- Your selected preset's playstyle
+
+## Loot Selection
+
+After each battle, Fireball selects from available rewards using a scoring system that considers:
+
+- **Item rarity** — higher rarity items score better
+- **Current needs** — low health triggers healing priority
+- **Game phase** — different strategies for early vs. late rooms
+- **Critical health** — below 30% HP shifts to defensive choices
+
+Possible loot includes healing items, max health upgrades, weapons, shields, and currency.
+
+## Dungeon History
+
+View your past runs on the **Dungeons** page (accessible from the sidebar under Games). The history page includes:
+
+- **Type filter** — show All, Normal, or Underhaul runs
+- **Won-only filter** — toggle to show only successful runs
+- **Result limit** — display 20, 50, or 100 runs
+- **Win rate** — see your overall win/loss ratio for the filtered results
+
+## Live Dungeon Viewer
+
+While a dungeon is in progress, you can watch it live. The viewer shows:
+
+- Current room and encounter state (combat or loot phase)
+- Enemy stats and effects
+- Player stats
+- Aggregated loot summary across all encounters
+- Navigation between dungeons in the same job
+- Auto-refresh every 5 seconds until the run completes
+
+## Configuration Options
+
+Before starting a dungeon run, you can configure:
+
+| Option         | Description                                                                                                                                          |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Runs**       | Capped by energy and sparks                                                                                                                          |
+| **Autoclaim**  | Automatically claim energy from ROMs if needed                                                                                                       |
+| **Autorepair** | Auto-repair broken gear during the session. If gear is beyond repair, Fireball will swap it for another piece of the same rarity from your inventory |
+| **Agent AI Preset**  | Choose Defensive, Balanced, or Offensive playstyle                                                                                                   |
+
+A **Repeat Previous Run** button appears after your first session, letting you quickly reuse your last configuration.
+
+## Tips
+
+- **Start with Normal dungeons** if you're new — learn the system before spending on harder content
+- **Check your gear durability** before starting a batch of runs
+- **Monitor your energy** — the play page shows your current energy and how many runs you can afford

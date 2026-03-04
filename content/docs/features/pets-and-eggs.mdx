@@ -1,0 +1,79 @@
+---
+title: Pets & Eggs
+description: Manage your pet companions and hatch eggs
+---
+
+The Pets page is where you manage your hatched pets and unhatched eggs. Feed hungry pets, track hatching progress, and filter through your collection.
+
+## Views
+
+Toggle between three views at the top of the page:
+
+| View     | Shows                       |
+| -------- | --------------------------- |
+| **All**  | Both pets and eggs together |
+| **Pets** | Only hatched pets           |
+| **Eggs** | Only unhatched eggs         |
+
+## Filters
+
+The Pets page has extensive filtering options to help you find exactly what you're looking for:
+
+### Rarity (Pets only)
+
+Filter by: Common, Uncommon, Rare, Epic, Legendary, Relic, Giga
+
+### Faction (Pets only)
+
+Filter by faction membership, including "No Faction" for unaffiliated pets.
+
+### Egg Type
+
+Filter by origin: Inaugural Steed, Silver ROM, Gold ROM, Void ROM, or Giga ROM. This works for both pet and egg views.
+
+### Gender (Pets only)
+
+Filter by: Male or Female
+
+### Hatchery Status (Eggs only)
+
+Filter eggs by whether they're currently in the hatchery or not.
+
+### Hungry (Pets only)
+
+A quick-toggle checkbox at the top shows only hungry pets with a count badge. When active, pets are sorted by hunger level (hungriest first) so you can prioritize feeding.
+
+## Feeding Pets
+
+Click a hungry pet to open the **feed overlay** — a grid showing all available food items from your inventory.
+
+Each food item displays:
+
+- Your current supply (available / total)
+- Food effects as tooltips, including:
+  - **Reduce Pet Hunger** — Decreases hunger level
+  - **Prevent Pet Hunger Loss** — Adds hunger buffer
+  - **Increase Pet Output** — Boosts production
+  - **Increase High Tier Chance** — Improves rare outcome probability
+
+Disabled food (insufficient supply) appears grayed out.
+
+## Egg Hatching
+
+Eggs show their hatching progress:
+
+| Status             | Display                        |
+| ------------------ | ------------------------------ |
+| **Not started**    | No progress bar                |
+| **In hatchery**    | Progress percentage (0–100%)   |
+| **Ready to hatch** | Full progress, ready to reveal |
+
+Eggs are sorted by priority: ready to hatch first, then by progress (highest first), then unstarted eggs last.
+
+You can automate egg management with the [Hatchery service](/guides/services#hatchery), which maintains temperature, comfort, and fate levels automatically.
+
+## Sorting
+
+- **Default** — Hatched pets first (sorted by rarity, highest first), then eggs
+- **Hungry filter active** — Pets sorted by hunger level (hungriest first)
+- **Eggs** — Sorted by: Ready to hatch → In hatchery (by progress) → Not started
