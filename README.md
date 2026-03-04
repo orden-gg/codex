@@ -78,38 +78,6 @@ codex/
 └── vercel.json           # Vercel deployment config
 ```
 
-## Writing Documentation
-
-Documentation is written in MDX format and stored in the `content/docs/` directory.
-
-### Creating a New Page
-
-1. Create a new `.mdx` file in the appropriate directory under `content/docs/`
-2. Add frontmatter at the top:
-
-```mdx
----
-title: Your Page Title
-description: Brief description of the page
----
-
-Your content here...
-```
-
-3. The file will automatically be available in the documentation based on its path
-
-### Using Components
-
-MDX allows you to use React components within your markdown:
-
-```mdx
-<Card title="Getting Started" href="/getting-started">
-  Set up your account and start playing
-</Card>
-```
-
-See the [Fumadocs documentation](https://fumadocs.vercel.app/) for available components.
-
 ## Contributing
 
 We welcome contributions from the community! Whether you're fixing typos, improving documentation, or adding new content, your help is appreciated.
