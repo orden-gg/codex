@@ -2,8 +2,12 @@
 
 import { useMemo } from 'react';
 import gear from '@fireballgg/sdk/data/gear.json';
+import { DollarSign, Minus } from 'lucide-react';
 import { UpscaleIcon } from './upscale-icon';
 import { useItemsLastSale } from '@/hooks/use-items-last-sale';
+import { useEthPrice } from '@/hooks/use-eth-price';
+import { Skeleton } from '@/components/ui/skeleton';
+import { formatPrice } from '@/lib/utils';
 
 interface Gear {
   GAME_ITEM_ID_CID: number;
@@ -36,7 +40,10 @@ const equipToNames: Record<number, string> = {
 };
 
 export function GearTable() {
-  const { data: lastSaleItems, isLoading } = useItemsLastSale();
+  const { data: lastSaleItems, isLoading: isLoadingItems } = useItemsLastSale();
+  const { data: ethPrice, isLoading: isLoadingEthPrice } = useEthPrice();
+
+  const isPriceLoading = isLoadingItems || isLoadingEthPrice;
 
   const priceMap = useMemo(() => {
     if (!lastSaleItems) return new Map<number, number>();
@@ -53,7 +60,7 @@ export function GearTable() {
   }, [lastSaleItems]);
 
   const getDurabilityRange = (durabilityArray: number[]) => {
-    if (!durabilityArray || durabilityArray.length === 0) return '-';
+    if (!durabilityArray || durabilityArray.length === 0) return <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />;
     const min = Math.min(...durabilityArray);
     const max = Math.max(...durabilityArray);
     return min === max ? `${min}` : `${min}-${max}`;
@@ -95,7 +102,16 @@ export function GearTable() {
                 <td className="px-4 py-3 text-sm align-middle">{getDurabilityRange(item.DURABILITY_CID_array)}</td>
                 <td className="px-4 py-3 text-sm align-middle">{item.REPAIR_COUNT_CID}</td>
                 <td className="px-4 py-3 text-sm align-middle">
-                  {priceMap.has(item.GAME_ITEM_ID_CID) ? `${priceMap.get(item.GAME_ITEM_ID_CID)} eth` : '-'}
+                  {isPriceLoading ? (
+                    <Skeleton className="h-4 w-16" />
+                  ) : priceMap.has(item.GAME_ITEM_ID_CID) && ethPrice ? (
+                    <span className="flex items-center gap-0.5">
+                      <DollarSign className="h-3.5 w-3.5" />
+                      {formatPrice(priceMap.get(item.GAME_ITEM_ID_CID)! * ethPrice)}
+                    </span>
+                  ) : (
+                    <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />
+                  )}
                 </td>
               </tr>
             ))}

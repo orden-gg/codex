@@ -18,11 +18,11 @@
   ],
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "fumadocs-mdx && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "postinstall": "fumadocs-mdx"
+    "prebuild": "fumadocs-mdx"
   },
   "dependencies": {
     "@fireballgg/sdk": "0.0.3",
@@ -31,6 +31,7 @@
     "fumadocs-core": "16.6.0",
     "fumadocs-mdx": "14.2.7",
     "fumadocs-ui": "16.6.0",
+    "lucide-react": "0.577.0",
     "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",

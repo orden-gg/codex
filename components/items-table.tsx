@@ -2,8 +2,12 @@
 
 import { useMemo } from 'react';
 import items from '@fireballgg/sdk/data/items.json';
+import { DollarSign, Minus } from 'lucide-react';
 import { UpscaleIcon } from './upscale-icon';
 import { useItemsLastSale } from '@/hooks/use-items-last-sale';
+import { useEthPrice } from '@/hooks/use-eth-price';
+import { Skeleton } from '@/components/ui/skeleton';
+import { formatPrice } from '@/lib/utils';
 
 interface Item {
   ID_CID: number;
@@ -27,7 +31,10 @@ const rarityColorVars: Record<number, string> = {
 };
 
 export function ItemsTable() {
-  const { data: lastSaleItems, isLoading } = useItemsLastSale();
+  const { data: lastSaleItems, isLoading: isLoadingItems } = useItemsLastSale();
+  const { data: ethPrice, isLoading: isLoadingEthPrice } = useEthPrice();
+
+  const isPriceLoading = isLoadingItems || isLoadingEthPrice;
 
   const priceMap = useMemo(() => {
     if (!lastSaleItems) return new Map<number, number>();
@@ -42,8 +49,6 @@ export function ItemsTable() {
 
     return map;
   }, [lastSaleItems]);
-
-  console.log(priceMap);
 
   return (
     <div className="space-y-4">
@@ -73,18 +78,27 @@ export function ItemsTable() {
                 </td>
                 <td className="px-4 py-3 text-sm text-fd-muted-foreground align-middle">{item.ID_CID}</td>
                 <td className="px-4 py-3 text-sm font-medium align-middle">{item.NAME_CID}</td>
-                <td className="px-4 py-3 text-sm align-middle">{item.TYPE_CID || '-'}</td>
+                <td className="px-4 py-3 text-sm align-middle">{item.TYPE_CID || <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />}</td>
                 <td
                   className="px-4 py-3 text-sm font-medium align-middle"
                   style={{ color: rarityColorVars[item.RARITY_CID] }}
                 >
-                  {item.RARITY_NAME || '-'}
+                  {item.RARITY_NAME || <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />}
                 </td>
                 <td className="px-4 py-3 text-sm text-fd-muted-foreground max-w-md align-middle">
-                  {item.DESCRIPTION_CID || '-'}
+                  {item.DESCRIPTION_CID || <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />}
                 </td>
                 <td className="px-4 py-3 text-sm align-middle">
-                  {priceMap.has(item.ID_CID) ? `${priceMap.get(item.ID_CID)} eth` : '-'}
+                  {isPriceLoading ? (
+                    <Skeleton className="h-4 w-16" />
+                  ) : priceMap.has(item.ID_CID) && ethPrice ? (
+                    <span className="flex items-center gap-0.5">
+                      <DollarSign className="h-3.5 w-3.5" />
+                      {formatPrice(priceMap.get(item.ID_CID)! * ethPrice)}
+                    </span>
+                  ) : (
+                    <Minus className="h-3.5 w-3.5 text-fd-muted-foreground" />
+                  )}
                 </td>
               </tr>
             ))}
